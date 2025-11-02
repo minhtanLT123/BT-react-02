@@ -1,9 +1,9 @@
-import React from 'react'
 
 export default function Model() {
     return (
-        <div>
-            <img src="./images/model.jpg" alt="" />
+        <div className='flex items-center justify-center'>
+            <img src="./glassesImage/model.jpg" alt="model" />
+
         </div>
     )
 }

@@ -2,22 +2,45 @@ import { useState } from "react"
 import glassData from './glassData.json'
 import Model from "./model";
 import Glass from "./glass";
+import Header from "./header";
+import Footer from "./footer";
 
 export default function GlassTry() {
-    const [glassDataList, setGlassDataList] = useState(glassData);
+    const [glasses, setGlasses] = useState(glassData);
+    const [glassTryDetail, setGlassTryDetail] = useState(null);
+
+    const onGetGlassDetailFromGlass = (glasses) => {
+        setGlassTryDetail(glasses);
+
+    };
+
+    const renderListGlasses = () => {
+        return glasses.map((glass) => (
+            <Glass
+                key={glass.id}
+                glassProp={glass}
+                onGetGlassDetailFromGlassProp={onGetGlassDetailFromGlass}
+
+
+            />
+
+        ));
+
+    };
 
     return (
-
-        <div className=" container bg-[url(./images/background.jpg)] bg-no-repeat w-full h-full">
-            <div className="grid grid-rows-2 ">
-                <div className="mx-auto w-50" >
-                    <Model />
-                </div>
-                <div>
-                    <Glass />
-                </div>
+        <div className="  flex flex-col">
+            <div>
+                <Header />
             </div>
+            <div className="m-5 grid grid-cols-2">
+                <Model />
+                {renderListGlasses()}
 
+            </div>
+            <div>
+                <Footer />
+            </div>
         </div>
     )
 }
