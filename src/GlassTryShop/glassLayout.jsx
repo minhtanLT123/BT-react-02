@@ -8,7 +8,7 @@ export default function Glass(props) {
         onGetGlassDetailFromGlassProp(glassProp)
     }
     return (
-        <div className=' container grid grid-cols-6  gap-2 items-center mr-5'>
+        <div className='grid grid-cols-6  gap-2 items-center p-5'>
 
             <img src={url} alt="" />
             <p>{name}</p>

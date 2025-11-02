@@ -1,7 +1,7 @@
 import { useState } from "react"
 import glassData from './glassData.json'
 import Model from "./model";
-import Glass from "./glass";
+import Glass from "./glassLayout";
 import Header from "./header";
 import Footer from "./footer";
 
@@ -35,7 +35,9 @@ export default function GlassTry() {
             </div>
             <div className="m-5 grid grid-cols-2">
                 <Model />
-                {renderListGlasses()}
+                <div>
+                    {renderListGlasses()}
+                </div>
 
             </div>
             <div>
