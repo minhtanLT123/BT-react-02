@@ -1,11 +1,12 @@
 import GlassTryOnModel from "./glassTry";
 
 export default function Model(props) {
+    const { glassTryDetail } = props;
     return (
         <div className='flex items-center justify-center relative'>
-            <img src="./glassesImage/model.jpg" alt="model" />
-            <div className="absolute w-70">
-                <GlassTryOnModel />
+            <img src="./glassesImage/model.jpg" alt="model" className="" />
+            <div className="absolute scale-180 top-1/4 ">
+                <GlassTryOnModel glassTryDetail={glassTryDetail} />
             </div>
         </div>
     )

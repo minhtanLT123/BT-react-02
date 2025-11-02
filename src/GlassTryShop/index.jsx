@@ -5,44 +5,47 @@ import Glass from "./glassLayout";
 import Header from "./header";
 import Footer from "./footer";
 
-export default function GlassTry() {
+export default function GlassTryShop() {
     const [glasses, setGlasses] = useState(glassData);
-    const [glassTryDetail, setGlassTryDetail] = useState(null);
+    // const [glassDetail, setGlassDetail] = useState(null);
+    const [glassTryDetail, setGlassTryDetail] = useState(null)
 
-    const onGetGlassDetailFromGlass = (glasses) => {
-        setGlassTryDetail(glasses);
 
-    };
 
+    // Hàm xử lý khi click Try
+    const findIndexGlassToTry = (id) => {
+        const glass = glasses.find((item) => item.id === id)
+        setGlassTryDetail(glass)
+
+    }
     const renderListGlasses = () => {
         return glasses.map((glass) => (
             <Glass
                 key={glass.id}
                 glassProp={glass}
-                onGetGlassDetailFromGlassProp={onGetGlassDetailFromGlass}
-
-
+                findIndexGlassToTryProp={findIndexGlassToTry}
             />
-
         ));
-
     };
 
     return (
-        <div className="  flex flex-col">
-            <div>
-                <Header />
-            </div>
-            <div className="m-5 grid grid-cols-2">
-                <Model />
+        <div className=" ">
+
+            <Header />
+
+            <div className="grid grid-col-2">
+                {/* Model */}
+                <div className="m-10">
+                    <Model glassTryDetail={glassTryDetail} />
+                </div>
+                {/* Danh sách kính */}
                 <div>
                     {renderListGlasses()}
                 </div>
+            </div>
 
-            </div>
-            <div>
-                <Footer />
-            </div>
+            <Footer />
+
         </div>
     )
 }
