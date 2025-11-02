@@ -1,5 +1,4 @@
 import GlassTryOnModel from "./glassTry";
-
 export default function Model(props) {
     const { glassTryDetail } = props;
     return (

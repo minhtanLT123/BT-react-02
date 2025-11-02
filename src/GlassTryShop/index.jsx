@@ -38,8 +38,10 @@ export default function GlassTryShop() {
                     <Model glassTryDetail={glassTryDetail} />
                 </div>
                 {/* Danh sách kính */}
-                <div className="grid grid-cols-5 gap-2 text-center  ">
+                <div className="grid grid-cols-5 gap-2 text-center h-[150px]   ">
+
                     {renderListGlasses()}
+
                 </div>
             </div>
 

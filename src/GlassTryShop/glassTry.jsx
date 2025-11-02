@@ -1,6 +1,3 @@
-import React from 'react'
-
-
 export default function GlassTryOnModel(props) {
     const { glassTryDetail } = props
 
@@ -10,7 +7,7 @@ export default function GlassTryOnModel(props) {
         <div className=''>
             <img
                 src={glassTryDetail.url}
-                className="opacity-80 w-40"
+                className=" w-40"
             />
         </div>
     )

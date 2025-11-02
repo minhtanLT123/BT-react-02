@@ -1,9 +1,6 @@
-import { useState } from "react"
-
 export default function Glass(props) {
     const { glassProp, findIndexGlassToTry } = props;
     const { url, name, id } = glassProp;
-
 
     return (
         <div className=" shadow-md p-0 m-2">
