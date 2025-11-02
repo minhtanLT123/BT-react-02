@@ -7,7 +7,6 @@ import Footer from "./footer";
 
 export default function GlassTryShop() {
     const [glasses, setGlasses] = useState(glassData);
-    // const [glassDetail, setGlassDetail] = useState(null);
     const [glassTryDetail, setGlassTryDetail] = useState(null)
 
 
@@ -23,7 +22,7 @@ export default function GlassTryShop() {
             <Glass
                 key={glass.id}
                 glassProp={glass}
-                findIndexGlassToTryProp={findIndexGlassToTry}
+                findIndexGlassToTry={findIndexGlassToTry}
             />
         ));
     };
@@ -33,13 +32,13 @@ export default function GlassTryShop() {
 
             <Header />
 
-            <div className="grid grid-col-2">
+            <div className="grid grid-cols-2">
                 {/* Model */}
                 <div className="m-10">
                     <Model glassTryDetail={glassTryDetail} />
                 </div>
                 {/* Danh sách kính */}
-                <div>
+                <div className="grid grid-cols-5 gap-2 text-center  ">
                     {renderListGlasses()}
                 </div>
             </div>

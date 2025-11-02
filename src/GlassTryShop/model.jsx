@@ -5,7 +5,7 @@ export default function Model(props) {
     return (
         <div className='flex items-center justify-center relative'>
             <img src="./glassesImage/model.jpg" alt="model" className="" />
-            <div className="absolute scale-180 top-1/4 ">
+            <div className="absolute scale-160 top-40 ">
                 <GlassTryOnModel glassTryDetail={glassTryDetail} />
             </div>
         </div>

@@ -10,7 +10,6 @@ export default function GlassTryOnModel(props) {
         <div className=''>
             <img
                 src={glassTryDetail.url}
-                // alt={glassTryDetail.name}
                 className="opacity-80 w-40"
             />
         </div>
